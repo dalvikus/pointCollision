@@ -12,5 +12,12 @@ Here is one solution by QuadTree. Assume that **true** points are clustered
 
 See [Quadtree](https://en.wikipedia.org/wiki/Quadtree) for general concept of QuadTree, but this work does not follow its algorithm there.
 
-## Why collision
-In a 2d map in a game, QuadTree is a efficient way to check if an object collides other ones.
+## How to Use
+1. Create a root node with horizontal interval and vertical interval which defines a square covered by the root node
+2. Add **positive** point to a root node, which find a smallest node that contains only the point
+3. Add more points
+4. Call `contains` to check whether a point is potitive or not
+5. Call **simplify** to merge nodes to boost `contains` by `contains2`
+
+## Why Collision
+In a 2d game map, QuadTree is a efficient way to check if an object collides other ones.
