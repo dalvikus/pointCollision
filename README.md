@@ -12,6 +12,18 @@ Here is one solution by QuadTree. Assume that **true** points are clustered
 
 See [Quadtree](https://en.wikipedia.org/wiki/Quadtree) for general concept of QuadTree, but this work does not follow its algorithm there.
 
+## How to Compile
+```
+$ g++ -Wall -Wextra -g -c -o Interval.o Interval.cpp
+$ g++ -Wall -Wextra -g -c -o Node.o Node.cpp
+$ g++ -Wall -Wextra -g -o testNode testNode.cpp Interval.o Node.o
+# -g for debugging
+
+$ ./testNode
+# or for debugging with valgrind; especially memory leak
+$ valgrind --leak-check=full ./testNode
+```
+
 ## How to Use
 1. Create a root node with horizontal interval and vertical interval which defines a square covered by the root node
 2. Add **positive** point to a root node, which find a smallest node that contains only the point
