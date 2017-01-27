@@ -1,6 +1,8 @@
 # pointCollision
 test if a point collides other points
 
+written in C++; [Scala version](https://github.com/dalvikus/pointCollisionInScala)
+
 ## Problem
 > There are two dimensional array which contains 1 (true) or 0 (false). How do we tell if given a point is true or false **efficiently**?
 
